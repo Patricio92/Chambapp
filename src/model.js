@@ -1,3 +1,14 @@
+export const services = [
+  {name:'Plomería', icon:'↝', description:'Fugas, llaves, tuberías y más'},
+  {name:'Electricidad', icon:'ϟ', description:'Contactos, luces e instalaciones'},
+  {name:'Pintura', icon:'🎨', description:'Muros, techos y renovación de espacios'},
+  {name:'Carpintería', icon:'🪚', description:'Muebles, puertas y reparaciones en madera'},
+  {name:'Albañilería', icon:'🧱', description:'Muros, pisos y pequeñas remodelaciones'},
+  {name:'Cerrajería', icon:'🔑', description:'Cerraduras, llaves y apertura de puertas'},
+  {name:'Limpieza', icon:'🧹', description:'Limpieza del hogar y limpieza profunda'},
+  {name:'Jardinería', icon:'🌿', description:'Poda, plantas y cuidado de jardines'},
+  {name:'Electrodomésticos', icon:'🛠', description:'Reparación de lavadoras, refrigeradores y más'},
+];
 export const colonies = ['Roma Norte','Roma Sur','Condesa','Del Valle','Narvarte','Coyoacán','Centro','Polanco','Santa María la Ribera','Otra colonia'];
 export const labels = {pending:'Buscando profesional',claimed:'Profesional asignado',quoted:'Cotización recibida',accepted:'En proceso',rejected:'Cotización rechazada',completed:'Servicio terminado'};
 export function transition(job, action, data = {}) {

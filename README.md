@@ -1,6 +1,6 @@
 # Chambapp
 
-Prototipo para conectar clientes y profesionales de plomería y electricidad en Ciudad de México.
+Prototipo para conectar clientes y profesionales de plomería, electricidad, pintura, carpintería, albañilería, cerrajería, limpieza, jardinería y reparación de electrodomésticos en Ciudad de México.
 
 ## Ver la app
 
@@ -21,6 +21,8 @@ En tu computadora, abre http://localhost:3000 en el navegador. En un entorno rem
 4. Cambia a **Soy cliente**, abre **Mis solicitudes** y acepta o rechaza la cotización.
 5. Si aceptas, cambia al profesional y marca el trabajo como terminado.
 6. Vuelve a cliente para calificar de 1 a 5 estrellas.
+
+El profesional puede cambiar su especialidad y colonia con **Editar especialidad y colonia**, sin perder sus trabajos anteriores.
 
 Las solicitudes persisten en el navegador con localStorage. La demo tiene un cliente y un profesional por navegador. La cercanía se simula por coincidencia de colonia. No incluye cuentas reales, servidor de datos, pagos, mapas ni identidad verificada. No ingresar datos sensibles. Para comenzar desde cero, borra los datos del sitio en tu navegador.
 
