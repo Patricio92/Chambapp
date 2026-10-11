@@ -1,0 +1,18 @@
+{
+  "name": "Chambapp",
+  "short_name": "Chambapp",
+  "description": "Una mano, justo cuando la necesitas. MVP demostrativo de servicios protegidos para el hogar.",
+  "lang": "es-MX",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafaf6",
+  "theme_color": "#126b52",
+  "icons": [
+    {
+      "src": "/src/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
