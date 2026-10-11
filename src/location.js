@@ -1,3 +1,4 @@
+import {distanceKm} from './geo.js';
 import {postalRecords} from './data/postal.js';
 export {postalRecords};
 export const boroughs = [...new Set(postalRecords.map(r=>r.borough))].sort((a,b)=>a.localeCompare(b,'es'));
@@ -9,7 +10,8 @@ export function validLocation({borough,cp,colony}){
   return Boolean(record && record.borough===borough && record.colonies.includes(colony));
 }
 export function nearbyJob(job,profile){
-  if(job.status!=='pending'||job.service!==profile.service)return false;
+  if(job.status!=='pending'||job.service!==profile.service||profile.available===false)return false;
+  if(job.point){const distance=distanceKm(job.point,profile.point);return distance!==null&&distance<=Number(profile.radiusKm??10);}
   if(job.borough && profile.borough)return job.borough===profile.borough;
   return job.colony===profile.colony;
 }

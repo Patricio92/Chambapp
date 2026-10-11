@@ -41,3 +41,13 @@ npm test
 ```
 
 El script importa una versión fija y comprueba la cobertura antes de escribir. Una actualización a otra fuente o fecha necesita revisar sus asociaciones, licencia y pruebas; no se deben mezclar catálogos ni sustituir códigos por rangos numéricos.
+
+## Mapas
+
+- Biblioteca: [Leaflet 1.9.4](https://leafletjs.com/), obtenida del paquete npm fijo `leaflet@1.9.4` y copiada sin modificar a `src/vendor/leaflet/`.
+- Licencia: BSD 2-Clause; texto completo incluido en `src/vendor/leaflet/LICENSE`.
+- SHA-256 del tarball `leaflet-1.9.4.tgz`: `84c65a256e50657896f54c33bd857b6849ebe94c817803be818bf32a3dde0b77`.
+- Imágenes de calles: `https://tile.openstreetmap.org/{z}/{x}/{y}.png`, con atribución visible a OpenStreetMap y enlace a sus derechos de autor. No hay precarga masiva ni descarga offline.
+- [Política de uso de imágenes](https://operations.osmfoundation.org/policies/tiles/): respetar atribución y caché HTTP; evaluar proveedor comercial o infraestructura propia para una operación con tráfico elevado.
+- No se usa Nominatim, geocodificación automática, cálculo de rutas ni API de tiempos de viaje. Las distancias se calculan con la fórmula de Haversine entre puntos elegidos por el usuario.
+- La biblioteca está verificada por las pruebas del navegador. Se verificó la descarga HTTPS de imágenes reales de CDMX desde el proveedor con el agente identificado como `Chambapp-development/0.1 (+https://github.com/Patricio92/Chambapp)` y referente local. Las imágenes se inspeccionaron y no eran respuestas de bloqueo. La carga directa en Chromium de este entorno sigue pendiente: el navegador no confía en el certificado del proxy y la revisión automática rechazó modificar su confianza. No se desactivó TLS ni se modificó el almacén de certificados. La descarga por las herramientas con la confianza ya instalada no valida el transporte HTTPS en Chromium.
